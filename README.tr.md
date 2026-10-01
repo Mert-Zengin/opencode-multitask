@@ -1,3 +1,18 @@
+# OpenCode Multitask Sürümü
+> **Cursor Tarzı Çoklu Ajan (Multi-Agent) Orkestrasyonu ve Paralel Subagent Görevlendirmesi ile Güçlendirildi**  
+> **Geliştirici & Bakımcı:** **Mert Zengin**
+
+---
+
+## ⚡ Multitask & Otonom Subagent Desteği
+Bu özel sürüm, OpenCode'a Cursor Composer benzeri gelişmiş **multitask** ve **paralel alt ajan (subagent) delegasyon** yetenekleri kazandırır:
+- 🚀 **Otonom Görev Ayrıştırma (Decomposition):** Karmaşık hedefleri analiz eder ve bağımsız alt parçalara bölerek paralel dağıtır.
+- ⚡ **`MultitaskTool` Çekirdek Motoru:** Effect-TS tabanlı eşzamanlı havuz ile birden fazla uzman ajanı (`general`, `explore` vb.) aynı anda çalıştırır.
+- 🛡️ **Çakışma Koruması & Net Kapsam:** Alt ajanlar arasında net dosya sahiplikleri ve API sözleşmeleri kurarak dosya ezilmelerini önler.
+- 📊 **Konsolide Raporlama:** Tüm alt görev çıktılarını yapılandırılmış `<multitask_summary>` formatında toplayıp ana orkestratöre iletir.
+
+---
+
 <p align="center">
   <a href="https://opencode.ai">
     <picture>
@@ -7,7 +22,7 @@
     </picture>
   </a>
 </p>
-<p align="center">Açık kaynaklı yapay zeka kodlama asistanı.</p>
+<p align="center">Açık kaynaklı yapay zeka kodlama asistanı — Mert Zengin Multitask Sürümü.</p>
 <p align="center">
   <a href="https://opencode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
   <a href="https://www.npmjs.com/package/opencode-ai"><img alt="npm" src="https://img.shields.io/npm/v/opencode-ai?style=flat-square" /></a>

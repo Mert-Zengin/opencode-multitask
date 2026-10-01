@@ -1,3 +1,18 @@
+# OpenCode Multitask Edition
+> **Enhanced with Cursor-style Multi-Agent Orchestration & Parallel Subagent Delegation**  
+> **Author & Maintainer:** **Mert Zengin**
+
+---
+
+## ⚡ Multitask & Autonomous Subagents
+This custom edition extends OpenCode with advanced **multi-tasking** and **parallel subagent delegation** capabilities inspired by Cursor Composer:
+- 🚀 **Autonomous Task Decomposition:** Decomposes complex engineering goals into parallel, independent sub-tasks.
+- ⚡ **`MultitaskTool` Core Engine:** Executes multiple specialized subagents concurrently using Effect-TS with concurrency pooling.
+- 🛡️ **Conflict Avoidance & Clear Scoping:** Assigns clear file ownership and API contracts between subagents to prevent race conditions.
+- 📊 **Consolidated Reporting:** Collects and formats all sub-task results into a structured summary for seamless review.
+
+---
+
 <p align="center">
   <a href="https://opencode.ai">
     <picture>
@@ -7,7 +22,7 @@
     </picture>
   </a>
 </p>
-<p align="center">The open source AI coding agent.</p>
+<p align="center">The open source AI coding agent — Multitask Edition by Mert Zengin.</p>
 <p align="center">
   <a href="https://opencode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
   <a href="https://www.npmjs.com/package/opencode-ai"><img alt="npm" src="https://img.shields.io/npm/v/opencode-ai?style=flat-square" /></a>
