@@ -165,6 +165,9 @@ const layer = Layer.effect(
                 task: {
                   general: "deny",
                 },
+                multitask: {
+                  general: "deny",
+                },
                 external_directory: {
                   [path.join(Global.Path.data, "plans", "*")]: "allow",
                 },
@@ -186,6 +189,7 @@ const layer = Layer.effect(
               defaults,
               Permission.fromConfig({
                 todowrite: "deny",
+                multitask: "deny",
               }),
               user,
             ),

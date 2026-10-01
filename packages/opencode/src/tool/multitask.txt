@@ -1,0 +1,22 @@
+Spawn and coordinate multiple subagents in parallel to execute complex, multi-part tasks concurrently.
+
+When to use the multitask tool:
+- When a user request consists of multiple independent or loosely coupled tasks that can be performed concurrently (e.g. implementing frontend and backend modules, writing tests alongside implementation, or performing multi-faceted research across different areas of the codebase).
+- To dramatically speed up execution compared to running tasks sequentially.
+- When decomposing a large objective into smaller, well-defined units of work assigned to specialized agents.
+
+When NOT to use the multitask tool:
+- For a single simple query or edit (use standard single-purpose tools like read, edit, or task).
+- When tasks have strict sequential dependencies where Task B requires the exact output or files produced by Task A. In that case, run Task A first or sequence them.
+- When multiple subagents would be concurrently modifying the exact same lines of the same file.
+
+Guidelines:
+1. Divide the overall goal into 2 to 6 focused, non-overlapping tasks.
+2. For each task, provide:
+   - `id`: A clear, short identifier (e.g. "api-auth", "frontend-login", "unit-tests").
+   - `description`: A 3-5 word human-readable description of the sub-task.
+   - `subagent_type`: The specialized agent type to use (e.g. "general", "explore").
+   - `prompt`: Detailed, autonomous instructions specifying the exact requirements, files to inspect or create, and what result to report back.
+3. The multitask tool will execute tasks concurrently according to the `concurrency` parameter (default 4).
+4. After all subagents complete, the tool returns a consolidated summary of all sub-task results.
+5. Review the combined outputs, verify consistency, and summarize the overall completion to the user.

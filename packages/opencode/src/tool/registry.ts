@@ -10,6 +10,7 @@ import { GlobTool } from "./glob"
 import { GrepTool } from "./grep"
 import { ReadTool } from "./read"
 import { TaskTool } from "./task"
+import { MultitaskTool } from "./multitask"
 import { Database } from "@opencode-ai/core/database/database"
 import { TodoWriteTool } from "./todo"
 import { WebFetchTool } from "./webfetch"
@@ -100,6 +101,7 @@ const layer = Layer.effect(
 
     const invalid = yield* InvalidTool
     const task = yield* TaskTool
+    const multitask = yield* MultitaskTool
     const read = yield* ReadTool
     const question = yield* QuestionTool
     const todo = yield* TodoWriteTool
@@ -215,6 +217,7 @@ const layer = Layer.effect(
           edit: Tool.init(edit),
           write: Tool.init(writetool),
           task: Tool.init(task),
+          multitask: Tool.init(multitask),
           fetch: Tool.init(webfetch),
           todo: Tool.init(todo),
           search: Tool.init(websearch),
@@ -238,6 +241,7 @@ const layer = Layer.effect(
             tool.edit,
             tool.write,
             tool.task,
+            tool.multitask,
             tool.fetch,
             tool.todo,
             tool.search,
@@ -324,7 +328,7 @@ const layer = Layer.effect(
             id: tool.id,
             description: [
               output.description,
-              tool.id === TaskTool.id ? yield* describeTask(input.agent) : undefined,
+              tool.id === TaskTool.id || tool.id === MultitaskTool.id ? yield* describeTask(input.agent) : undefined,
               tool.id === "execute" ? codeModeDescription : undefined,
             ]
               .filter(Boolean)
