@@ -11,6 +11,10 @@ Bu özel sürüm, OpenCode'a Cursor Composer benzeri gelişmiş **multitask** ve
 - 🛡️ **Çakışma Koruması & Net Kapsam:** Alt ajanlar arasında net dosya sahiplikleri ve API sözleşmeleri kurarak dosya ezilmelerini önler.
 - 📊 **Konsolide Raporlama:** Tüm alt görev çıktılarını yapılandırılmış `<multitask_summary>` formatında toplayıp ana orkestratöre iletir.
 
+### 📥 Hazır Derlenmiş Windows Binary (.exe)
+Doğrudan kullanıma hazır derlenmiş sürümü indirin:
+👉 **[opencode-multitask-win-x64.zip İndir](releases/opencode-multitask-win-x64.zip)** *(Multitask destekli `opencode-cli.exe` içerir)*
+
 ---
 
 <p align="center">

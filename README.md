@@ -11,6 +11,10 @@ This custom edition extends OpenCode with advanced **multi-tasking** and **paral
 - 🛡️ **Conflict Avoidance & Clear Scoping:** Assigns clear file ownership and API contracts between subagents to prevent race conditions.
 - 📊 **Consolidated Reporting:** Collects and formats all sub-task results into a structured summary for seamless review.
 
+### 📥 Pre-built Windows Binary (.exe)
+Download the standalone executable directly:
+👉 **[Download opencode-multitask-win-x64.zip](releases/opencode-multitask-win-x64.zip)** *(Includes `opencode-cli.exe` with Multitask support)*
+
 ---
 
 <p align="center">
